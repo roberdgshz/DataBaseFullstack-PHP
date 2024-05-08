@@ -3,7 +3,7 @@
     <div class="container">
         <h1>VISTA DE PRUEBA</h1>
         <a href="{{ route('doctores.create') }}" class="link">Crear Doctor</a>
-        <table class="table">
+        <table class="table table-s riped table-hover">
             <thead class="table-primary">
                 <tr>
                     <th>ID</th>
@@ -21,8 +21,8 @@
                         <td>{{ $doctor->apellido }}</td>
                         <td>{{ $doctor->especialidad }}</td>
                         <td>
-                            <a href="{{ route('doctores.show', $doctor->id) }}" class="action">Mostrar</a>
-                            <a href="{{ route('doctores.edit', $doctor->id) }}" class="action">Editar</a>
+                            <a href="{{ route('doctores.show', $doctor->id) }}" class="btn btn-primary">Mostrar</a>
+                            <a href="{{ route('doctores.edit', $doctor->id) }}" class="btn btn-success">Editar</a>
                             <form action="{{ route('doctores.destroy', $doctor->id) }}" method="POST" class="action">
                                 @csrf
                                 @method('DELETE')
