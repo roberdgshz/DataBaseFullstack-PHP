@@ -69,6 +69,7 @@ Route::get('/articulos', [articulosController::class, 'funcionArticulos']);
 
 Route::get('/vista_inicial', [vista1Controller::class, 'vista_inicial']);
 
+//----------------------------------------------------------------------------------------------------
 Route::get('/doctores',[DoctorController::class,'index'])->name('doctores.index');
 Route::get('/doctores/create',[DoctorController::class,'create'])->name('doctores.create');
 Route::get('/doctores/{id}',[DoctorController::class,'show'])->name('doctores.show');
